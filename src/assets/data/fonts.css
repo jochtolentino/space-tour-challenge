@@ -1,7 +1,0 @@
-@font-face {
-  font-family: 'CustomFont';
-  src: url('./path/to/font.woff2') format('woff2'),
-       url('./path/to/font.woff') format('woff'),
-       url('./path/to/font.ttf') format('truetype');
-  /* Add additional font formats and paths if necessary */
-}
