@@ -1,0 +1,8 @@
+{
+  "navArray": [
+    { "name": "HOME", "link": "/", "number": "00" },
+    { "name": "Destination", "link": "/destination", "number": "01" },
+    { "name": "Crew", "link": "/crew", "number": "02" },
+    { "name": "Technology", "link": "/technology", "number": "03" }
+  ]
+}
