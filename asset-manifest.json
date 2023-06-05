@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/space-tour-challenge/static/css/main.e6c13ad2.css",
-    "main.js": "/space-tour-challenge/static/js/main.e5857b76.js",
+    "main.js": "/space-tour-challenge/static/js/main.8a5bbb25.js",
     "static/js/787.28cb0dcd.chunk.js": "/space-tour-challenge/static/js/787.28cb0dcd.chunk.js",
     "static/media/home_bg.jpg": "/space-tour-challenge/static/media/home_bg.b8f0ac6bf01569b09f4f.jpg",
     "static/media/image-moon.png": "/space-tour-challenge/static/media/image-moon.d287d07182de3015952f.png",
@@ -23,11 +23,11 @@
     "static/media/icon-close.svg": "/space-tour-challenge/static/media/icon-close.d47fda63cbd8b3fedbbc1b2a53f64470.svg",
     "static/media/icon-hamburger.svg": "/space-tour-challenge/static/media/icon-hamburger.5273efa7c50e96ef3e51e7a2b54048ce.svg",
     "main.e6c13ad2.css.map": "/space-tour-challenge/static/css/main.e6c13ad2.css.map",
-    "main.e5857b76.js.map": "/space-tour-challenge/static/js/main.e5857b76.js.map",
+    "main.8a5bbb25.js.map": "/space-tour-challenge/static/js/main.8a5bbb25.js.map",
     "787.28cb0dcd.chunk.js.map": "/space-tour-challenge/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e6c13ad2.css",
-    "static/js/main.e5857b76.js"
+    "static/js/main.8a5bbb25.js"
   ]
 }
