@@ -14,10 +14,10 @@ const App = () => {
       <AnimatePresence>
       <main>
       <Routes>
-        <Route path="/space-tour-website/" element={<HomePage />} />
-        <Route path="/space-tour-website/destination" element={<DestinationPage />} />
-        <Route path="/space-tour-website/crew" element={<CrewPage />} />
-        <Route path="/space-tour-website/technology" element={<TechnologyPage />} />
+        <Route path="/space-tour-challenge/" element={<HomePage />} />
+        <Route path="/space-tour-challenge/destination" element={<DestinationPage />} />
+        <Route path="/space-tour-challenge/crew" element={<CrewPage />} />
+        <Route path="/space-tour-challenge/technology" element={<TechnologyPage />} />
       </Routes>
       </main>
       </AnimatePresence>

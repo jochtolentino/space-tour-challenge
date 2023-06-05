@@ -26,7 +26,7 @@ export const HomeDIV = styled.div`
     gap: 6rem;
   }
   @media (min-width: 100rem) {
-    max-width: 1400px;
+    max-width: 1350px;
     justify-content: space-between;
   }
 `;

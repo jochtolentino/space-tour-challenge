@@ -13,9 +13,9 @@ import { PageDescriptionText } from "../atoms/PageDescriptionText";
 const data = require("../assets/data/data.json");
 
 export const TechContainer = styled.div`
-  min-height: 100vh;
+  min-height: 80vh;
   display: grid;
-  grid-template-rows: 10% 90%;
+  grid-template-rows: 0% 90%;
   justify-content: center;
   padding-top: clamp(5.5rem, 23vw, 13rem);
   padding-bottom: 1.5rem;

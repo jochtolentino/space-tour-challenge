@@ -28,9 +28,6 @@ export const CustomBg = styled(motion.div)<StyledMotionDivProps>`
     background-repeat: no-repeat;
     background-size: cover;
     padding-top: 20rem;
-    background-position: center;
-    width: 100%;
-    height: 300px;
   }
 `;
 

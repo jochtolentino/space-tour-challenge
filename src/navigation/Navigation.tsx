@@ -31,7 +31,7 @@ export const CustomLink = styled(Link)`
   &:focus-visible {
     outline: 2px dashed white;
   }
-  
+
   &::before {
     @media (min-width: 40rem) {
       content: "";
@@ -54,6 +54,9 @@ export const CustomLink = styled(Link)`
 `;
 
 export const CustomLinkLogo = styled(Link)`
+  padding-left: 2rem;
+  padding-top: 1.25rem;
+  padding-bottom: 1rem;
   width: clamp(2.25rem, 4vw, 3rem);
   &:focus {
     outline: 2px dashed white;
@@ -70,7 +73,6 @@ export const CustomHeader = styled.header`
   position: absolute;
   width: 100%;
   padding-top: 1.25rem;
-  padding-left: 2rem;
   padding-bottom: 1rem;
   @media (min-width: 60rem) {
     padding-top: 3.15rem;
@@ -159,7 +161,7 @@ const Navigation = () => {
 
   return (
     <CustomHeader>
-      <CustomLinkLogo to="/" className="logo">
+      <CustomLinkLogo to="/space-tour-challenge/" className="logo">
         <img src={logo} alt="Space Tourism." />
       </CustomLinkLogo>
       <nav>
@@ -180,25 +182,25 @@ const Navigation = () => {
         {(isOpened || screenWidth > 640) && (
           <CustomMenu id="nav-menu">
             <li>
-              <CustomLink to="/">
+              <CustomLink to="/space-tour-challenge/">
                 <Span aria-hidden="true">00</Span>
                 HOME
               </CustomLink>
             </li>
             <li>
-              <CustomLink to="/destination">
+              <CustomLink to="/space-tour-challenge/destination">
                 <Span aria-hidden="true">01</Span>
                 DESTINATION
               </CustomLink>
             </li>
             <li>
-              <CustomLink to="/crew">
+              <CustomLink to="/space-tour-challenge/crew">
                 <Span aria-hidden="true">02</Span>
                 CREW
               </CustomLink>
             </li>
             <li>
-              <CustomLink to="/technology">
+              <CustomLink to="/space-tour-challenge/technology">
                 <Span aria-hidden="true">03</Span>
                 TECHNOLOGY
               </CustomLink>
