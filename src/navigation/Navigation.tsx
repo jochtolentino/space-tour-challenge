@@ -69,6 +69,26 @@ export const CustomLinkLogo = styled(Link)`
   }
 `;
 
+export const NavSkip = styled(Link)`
+  text-decoration: none;
+  color: $clr-dark-blue;
+  cursor: pointer;
+  background: $clr-white;
+  border: 0;
+  border-radius: 0 0 5px 5px;
+  padding: 0.5rem 1.5rem;
+  position: absolute;
+  top: 0;
+  left: 0.5rem;
+  transform: translateY(-120%);
+  transition: transform 0.4s ease-in;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  &:focus {
+    transform: translateY(0);
+    outline: none;
+  }
+`;
 export const CustomHeader = styled.header`
   position: absolute;
   width: 100%;
@@ -161,7 +181,9 @@ const Navigation = () => {
 
   return (
     <CustomHeader>
-      <CustomLinkLogo to="/space-tour-challenge/" className="logo">
+      <NavSkip to="#main">Skip navigation</NavSkip>
+
+      <CustomLinkLogo to="/space-tour-challenge/">
         <img src={logo} alt="Space Tourism." />
       </CustomLinkLogo>
       <nav>

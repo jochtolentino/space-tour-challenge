@@ -1,6 +1,3 @@
-import React from "react";
-import { motion } from "framer-motion";
-import { pageAnimation } from "../assets/animation/animations";
 import styled from "styled-components";
 
 interface Props {

@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { BackgroundContainer } from "../atoms/BackgroundContainer";
 import crewBG from "../assets/background-crew-desktop.jpg";
 import styled from "styled-components";
 import { AnimatePresence, motion } from "framer-motion";
@@ -9,51 +8,10 @@ import douglasH from "../assets/crew/image-douglas-hurley.webp";
 import anoushehA from "../assets/crew/image-anousheh-ansari.webp";
 import { TitleAndNumber } from "../molecules/TitleAndNumber";
 import { PageDescriptionText } from "../atoms/PageDescriptionText";
+import { InnerWrapper } from "../atoms/InnerWrapper";
+import { MainContainer } from "../atoms/MainContainer";
 
 const data = require("../assets/data/data.json");
-
-export const CrewContainer = styled.div`
-  min-height: 80vh;
-  display: grid;
-  grid-template-rows: 0% 90%;
-  justify-content: center;
-  padding-top: clamp(5.5rem, 23vw, 13rem);
-  padding-bottom: 1.5rem;
-  text-align: center;
-  @media (min-width: 30rem) {
-    text-align: left;
-  }
-  background-image: url(${crewBG});
-  background-repeat: no-repeat;
-  background-size: cover;
-
-  @media (min-width: 29rem) {
-    background-image: url(${crewBG});
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-
-  @media (min-width: 60rem) {
-    background-image: url(${crewBG});
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-`;
-
-export const InnerContainer = styled.div`
-  max-width: 12000px;
-  align-items: flex-end;
-  text-align: center;
-  @media (min-width: 60rem) {
-    display: flex;
-    text-align: left;
-    align-items: center;
-    justify-content: space-between;
-    gap: 20rem;
-    align-items: center;
-    padding-inline: 2rem;
-  }
-`;
 
 export const ImageContainer = styled.div`
   padding-inline: 6.5rem;
@@ -172,10 +130,10 @@ const CrewPage = () => {
   };
 
   return (
-    <CrewContainer>
+    <MainContainer path={crewBG} isDestination={false}>
       <TitleAndNumber pageTitle={"Meet your crew"} numberTitle={"02"} />
 
-      <InnerContainer>
+      <InnerWrapper>
         <ImageContainer>
           <AnimatePresence mode="wait">
             <MotionImgContainer
@@ -216,8 +174,8 @@ const CrewPage = () => {
             </TextInnerContainer>
           </MotionDivContainer>
         </AnimatePresence>
-      </InnerContainer>
-    </CrewContainer>
+      </InnerWrapper>
+    </MainContainer>
   );
 };
 

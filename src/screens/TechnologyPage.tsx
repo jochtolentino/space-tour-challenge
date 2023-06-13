@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { BackgroundContainer } from "../atoms/BackgroundContainer";
 import techBG from "../assets/background-technology-desktop.jpg";
 import { AnimatePresence, motion } from "framer-motion";
 import { textContainerVariants } from "../assets/animation/animations";
@@ -9,54 +8,10 @@ import spaceport from "../assets/tech/image-spaceport-portrait.jpg";
 import styled from "styled-components";
 import { TitleAndNumber } from "../molecules/TitleAndNumber";
 import { PageDescriptionText } from "../atoms/PageDescriptionText";
+import { InnerWrapper } from "../atoms/InnerWrapper";
+import { MainContainer } from "../atoms/MainContainer";
 
 const data = require("../assets/data/data.json");
-
-export const TechContainer = styled.div`
-  min-height: 80vh;
-  display: grid;
-  grid-template-rows: 0% 90%;
-  justify-content: center;
-  padding-top: clamp(5.5rem, 23vw, 13rem);
-  padding-bottom: 1.5rem;
-  text-align: center;
-  @media (min-width: 30rem) {
-    text-align: left;
-  }
-  background-image: url(${techBG});
-  background-repeat: no-repeat;
-  background-size: cover;
-
-  @media (min-width: 29rem) {
-    background-image: url(${techBG});
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-
-  @media (min-width: 60rem) {
-    background-image: url(${techBG});
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-`;
-
-export const InnerContainer = styled.div`
-  text-align: center;
-
-  @media (min-width: 60rem) {
-    display: flex;
-    text-align: left;
-    align-items: center;
-    justify-content: space-between;
-    gap: 12rem;
-    align-items: center;
-    padding-inline: 2rem;
-  }
-
-  @media (min-width: 84rem) {
-    width: 1360px;
-  }
-`;
 
 export const ImgContainer = styled.div`  
   @media(min-width:60rem) {
@@ -85,7 +40,7 @@ export const TextContainerRight = styled(motion.div)`
 `;
 
 export const TerminologyText = styled.h2`
-  font-size: clamp(0.875rem, 2vw, 1rem);
+  font-size: clamp(1rem, 2vw, 1rem);
   letter-spacing: 3px;
   font-weight: 400;
   color: white;
@@ -173,10 +128,10 @@ const TechnologyPage = () => {
   };
 
   return (
-    <TechContainer>
+    <MainContainer path={techBG} isDestination={false}>
       <TitleAndNumber pageTitle={"Space launch 101"} numberTitle={"03"} />
 
-      <InnerContainer className="inner-container tech-container-inner">
+      <InnerWrapper>
         <ImgContainer>
           <AnimatePresence mode="wait">
             <MotionImg
@@ -216,8 +171,8 @@ const TechnologyPage = () => {
             <PageDescriptionText description={description} />
           </TextContainerRight>
         </TextContainer>
-      </InnerContainer>
-    </TechContainer>
+      </InnerWrapper>
+    </MainContainer>
   );
 };
 

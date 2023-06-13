@@ -35,7 +35,7 @@ interface Props {
   path: string;
 }
 
-export const BackgroundContainer = (
+export const HomeContainer = (
   props: Props & { children?: React.ReactNode }
 ) => {
   return (

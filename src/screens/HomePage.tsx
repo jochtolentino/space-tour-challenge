@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import styled from "styled-components";
 import homeBG from "../assets/home_bg.jpg";
-import { BackgroundContainer } from "../atoms/BackgroundContainer";
+import { HomeContainer } from "../atoms/HomeContainer";
 
 export const ExploreButton = styled(motion.button)`
   background: hsl(0, 0%, 100%);
@@ -41,9 +41,6 @@ export const CustomTitle = styled.h1`
   font-size: clamp(1rem, 2.5vw, 1.75rem);
   font-weight: 400;
   letter-spacing: 3px;
-  // font-size: clamp(1rem, 2.5vw, 1.75rem);
-  // font-weight: 400;
-  // letter-spacing: 3px;
   color: white;
 `;
 
@@ -64,7 +61,7 @@ export const CustomHomeText = styled.p`
 
 const HomePage = () => {
   return (
-    <BackgroundContainer path={homeBG}>
+    <HomeContainer path={homeBG}>
       <HomeDIV>
         <DIVText>
           <CustomTitle>
@@ -85,7 +82,7 @@ const HomePage = () => {
           Explore
         </ExploreButton>
       </HomeDIV>
-    </BackgroundContainer>
+    </HomeContainer>
   );
 };
 

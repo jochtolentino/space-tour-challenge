@@ -1,5 +1,3 @@
-import React, { useEffect, useState } from "react";
-import { BackgroundContainer } from "../atoms/BackgroundContainer";
 import destinationBG from "../assets/background-destination-desktop.jpg";
 import moon from "../assets/destination/image-moon.png";
 import mars from "../assets/destination/image-mars.png";
@@ -9,49 +7,11 @@ import styled from "styled-components";
 import { AnimatePresence, motion } from "framer-motion";
 import { TitleAndNumber } from "../molecules/TitleAndNumber";
 import { PageDescriptionText } from "../atoms/PageDescriptionText";
+import { InnerWrapper } from "../atoms/InnerWrapper";
+import { MainContainer } from "../atoms/MainContainer";
+import { useState } from "react";
 
 const data = require("../assets/data/data.json");
-
-export const DestinationContainer = styled.div`
-  min-height: 80vh;
-  display: grid;
-  grid-template-rows: 0% 90%;
-  justify-content: center;
-  padding-top: clamp(5.5rem, 23vw, 13rem);
-  padding-bottom: 1.5rem;
-  text-align: center;
-  background-image: url(${destinationBG});
-  background-repeat: no-repeat;
-  background-size: cover;
-  overflow: hidden;
-
-  @media (min-width: 29rem) {
-    background-image: url(${destinationBG});
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-  @media (min-width: 30rem) {
-    text-align: left;
-  }
-  @media (min-width: 60rem) {
-    background-image: url(${destinationBG});
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-`;
-
-export const InnerContainer = styled.div`
-  text-align: center;
-  @media (min-width: 60rem) {
-    display: flex;
-    text-align: left;
-    align-items: center;
-    justify-content: space-between;
-    gap: 20rem;
-    align-items: center;
-    padding-inline: 2rem;
-  }
-`;
 
 export const TextWrapperMotionDiv = styled(motion.div)`
   @media (min-width: 60rem) {
@@ -90,7 +50,6 @@ export const DestBtn = styled.button<{ isClicked: boolean }>`
   cursor: pointer;
   letter-spacing: 2px;
   position: relative;
-
 
   &:hover {
     color: white;
@@ -197,9 +156,9 @@ const DestinationPage = () => {
   };
 
   return (
-    <DestinationContainer>
+    <MainContainer path={destinationBG} isDestination={true}>
       <TitleAndNumber pageTitle={"Pick your destination"} numberTitle={"01"} />
-      <InnerContainer>
+      <InnerWrapper>
         <AnimatePresence mode="wait">
           <motion.div
             key={destinationId}
@@ -245,8 +204,8 @@ const DestinationPage = () => {
             </InnerDetailWrapper>
           </DetailWrapper>
         </TextWrapperMotionDiv>
-      </InnerContainer>
-    </DestinationContainer>
+      </InnerWrapper>
+    </MainContainer>
   );
 };
 
